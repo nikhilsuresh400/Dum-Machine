@@ -1,0 +1,130 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", serif;
+}
+
+body {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 177, 177);
+    color: #ffffff;
+}
+
+.wrapper {
+
+    width: 40%;
+    padding: 1.6% 1%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    background-color: #333333;
+    box-shadow: 5px 5px 12px #00000035;
+    border-radius: 8px;
+}
+
+.instructionsArea {
+
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: solid 1px #666666;
+}
+
+.playArea {
+
+    display: grid;
+    grid-template-areas: 
+        "button button"
+        "button button"
+        "button button";
+    gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .playArea {
+
+        grid-template-areas: 
+                "button"
+                "button"
+                "button"
+                "button"
+                "button"
+                "button";
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .drum {
+        margin: 0 8%;
+    }
+}
+
+@media (max-width: 430px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    .instructionsArea {
+        border: none;
+        align-items: center;
+    }
+}
+
+.playArea img {
+
+    width: auto;
+    height: 100px;
+}
+
+.drum {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 10rem;
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 12px #00000035;
+    transition: all 0.05s;
+}
+
+.drum img {
+
+    margin-bottom: 1.2rem;
+}
+
+.drum:active {
+    scale: 0.95;
+}
+
+.instructionsArea h2 {
+    margin-bottom: 1rem;
+}
+
+.instructionsArea p {
+    line-height: 1.2rem;
+}  
